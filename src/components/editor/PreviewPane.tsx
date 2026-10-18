@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import { useEditorStore } from '@/store/editor';
 import { DocPage } from '@/components/doc/DocPage';
 import { SignatureModal } from '@/components/signature/SignatureModal';
+import { generateDocxBlob } from '@/lib/docx-generator';
 import {
   ZoomIn,
   ZoomOut,
@@ -53,40 +54,46 @@ export const PreviewPane: React.FC<PreviewPaneProps> = ({ Component, title = 'Do
         throw new Error('Preview element not found');
       }
 
-      const htmlContent = documentRef.current.innerHTML;
+      let exported = false;
+      try {
+        const htmlContent = documentRef.current.innerHTML;
+        const response = await fetch('/api/export/pdf', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            slug,
+            html: htmlContent,
+            paperSize: styles.paperSize,
+            docNumber: data.docNumber || slug || 'document',
+            styles,
+          }),
+        });
 
-      const response = await fetch('/api/export/pdf', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          slug,
-          html: htmlContent,
-          paperSize: styles.paperSize,
-          docNumber: data.docNumber || slug || 'document',
-          styles,
-        }),
-      });
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Failed to generate PDF: ${errorText}`);
+        if (response.ok) {
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          const fileName = `${data.docNumber || slug || 'document'}.pdf`;
+          a.download = fileName;
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
+          exported = true;
+        }
+      } catch {
+        // Fallback to client print
       }
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      const fileName = `${data.docNumber || slug || 'document'}.pdf`;
-      a.download = fileName;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
+      if (!exported) {
+        window.print();
+      }
     } catch (error) {
       console.error('PDF export error:', error);
-      alert('Could not generate server-side PDF. Please check server logs.');
+      window.print();
     } finally {
       setIsExportingPdf(false);
     }
@@ -95,18 +102,7 @@ export const PreviewPane: React.FC<PreviewPaneProps> = ({ Component, title = 'Do
   const handleDownloadDocx = async () => {
     try {
       setIsExportingDocx(true);
-      const res = await fetch('/api/export/docx', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          slug,
-          data,
-          styles,
-        }),
-      });
-
-      if (!res.ok) throw new Error('DOCX Export failed');
-      const blob = await res.blob();
+      const blob = await generateDocxBlob(slug, data, styles);
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;

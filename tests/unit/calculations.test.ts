@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { calculateInvoice } from '../../src/lib/calc.ts';
+import { calculateInvoice } from '../../src/lib/calc';
 
 describe('calculateInvoice', () => {
   test('calculates subtotal and 16% VAT correctly for standard line items', () => {

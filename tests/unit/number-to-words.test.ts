@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { numberToWords, formatCurrency, formatDate, generateDocNumber } from '../../src/lib/format.ts';
+import { numberToWords, formatCurrency, formatDate, generateDocNumber } from '../../src/lib/format';
 
 describe('numberToWords', () => {
   test('handles zero values correctly across currencies', () => {

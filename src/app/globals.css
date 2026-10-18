@@ -46,7 +46,8 @@ body {
 /* Print Rules */
 @media print {
   @page {
-    margin: 0;
+    size: auto;
+    margin: 15mm 15mm;
   }
 
   body {
@@ -60,12 +61,12 @@ body {
     box-shadow: none !important;
     border: none !important;
     margin: 0 !important;
-    padding: 30px !important;
+    padding: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
   }
 
-  nav, header, footer, button, .no-print {
+  nav, header, footer, button, .no-print, aside, [role="dialog"] {
     display: none !important;
   }
 }
