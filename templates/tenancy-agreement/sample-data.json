@@ -1,0 +1,26 @@
+{
+  "docNumber": "TA-2026-012",
+  "agreementDate": "2026-10-18",
+  "propertyAddress": "Apartment 4B, Acacia Court, Rhapta Road, Westlands, Nairobi (LR No. 1870/IV/42)",
+  "commencementDate": "2026-11-01",
+  "leaseTerm": "One (1) Year Renewable",
+  "currency": "KES",
+  "landlord": {
+    "name": "Ambassador James Karanja Gitau",
+    "idNumber": "National ID: 10482914",
+    "phone": "+254 722 334 455",
+    "address": "P.O. Box 48120 - 00100, Nairobi, Kenya"
+  },
+  "tenant": {
+    "name": "Brian Kiprop Cheruiyot",
+    "idNumber": "National ID: 29481923",
+    "phone": "+254 718 200 300",
+    "email": "brian.cheruiyot@gmail.com"
+  },
+  "monthlyRent": 65000,
+  "securityDeposit": 65000,
+  "waterElectricityDeposit": 10000,
+  "rentDueDay": "On or before the 5th day of every calendar month",
+  "mpesaAccount": "M-Pesa Paybill 247247 (Account: 0722334455)",
+  "noticePeriod": "One (1) full calendar month in writing"
+}

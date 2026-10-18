@@ -1,0 +1,17 @@
+.doc-po {
+  --po-primary: #0f2b48;
+  --po-accent: #1e3a8a;
+  --po-border: #cbd5e1;
+}
+
+.doc-po[data-variant="classic"] {
+  --po-primary: #b45309;
+  --po-accent: #d97706;
+  --po-border: #fde68a;
+}
+
+.doc-po[data-variant="bold"] {
+  --po-primary: #1e293b;
+  --po-accent: #334155;
+  --po-border: #e2e8f0;
+}

@@ -1,0 +1,17 @@
+.doc-delivery {
+  --del-primary: #047857;
+  --del-accent: #065f46;
+  --del-border: #a7f3d0;
+}
+
+.doc-delivery[data-variant="classic"] {
+  --del-primary: #0f2b48;
+  --del-accent: #1e3a8a;
+  --del-border: #cbd5e1;
+}
+
+.doc-delivery[data-variant="bold"] {
+  --del-primary: #1e293b;
+  --del-accent: #334155;
+  --del-border: #e2e8f0;
+}

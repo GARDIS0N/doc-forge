@@ -1,0 +1,40 @@
+{
+  "docNumber": "PO-2026-0312",
+  "date": "2026-10-18",
+  "deliveryDate": "2026-10-28",
+  "shippingMethod": "Direct Courier Delivery to Site",
+  "currency": "KES",
+  "sender": {
+    "businessName": "Apex Digital Solutions Ltd",
+    "email": "procurement@apexdigital.co.ke",
+    "phone": "+254 712 345 678",
+    "address": "Apex Warehouse & Labs, Enterprise Rd, Industrial Area, Nairobi, Kenya",
+    "kraPin": "P051234567Z"
+  },
+  "vendor": {
+    "name": "Silicon Savannah Hardware Distributors Ltd",
+    "email": "orders@siliconsavannah.co.ke",
+    "phone": "+254 720 111 222",
+    "address": "Industrial Area Commercial Center, Block C, Nairobi"
+  },
+  "items": [
+    {
+      "description": "Ubiquiti UniFi Dream Machine Pro & Enterprise 24-Port PoE Switch",
+      "qty": 2,
+      "unitPrice": 125000
+    },
+    {
+      "description": "CAT6A Pure Copper Shielded Ethernet Cable Rolls (305m drum)",
+      "qty": 6,
+      "unitPrice": 18500
+    },
+    {
+      "description": "APC Smart-UPS 3000VA LCD 230V Rackmount with SmartConnect",
+      "qty": 2,
+      "unitPrice": 160000
+    }
+  ],
+  "applyVat": true,
+  "terms": "1. All deliveries must match specifications and arrive in sealed original packaging.\n2. Invoices will be settled within 30 days of inspection.\n3. Defective goods must be replaced within 48 hours.",
+  "authorizedBy": "Erick Mutua (Head of Procurement)"
+}

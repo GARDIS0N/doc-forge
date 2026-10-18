@@ -1,0 +1,17 @@
+.doc-ntv {
+  --ntv-primary: #831843;
+  --ntv-accent: #9d174d;
+  --ntv-border: #fbcfe8;
+}
+
+.doc-ntv[data-variant="classic"] {
+  --ntv-primary: #0f2b48;
+  --ntv-accent: #1e3a8a;
+  --ntv-border: #cbd5e1;
+}
+
+.doc-ntv[data-variant="bold"] {
+  --ntv-primary: #1e293b;
+  --ntv-accent: #334155;
+  --ntv-border: #e2e8f0;
+}

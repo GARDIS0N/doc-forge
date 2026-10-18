@@ -1,0 +1,48 @@
+{
+  "fullName": "David Kimani Mwangi",
+  "title": "Lead Full-Stack & Cloud Solutions Architect",
+  "email": "david.mwangi@techkenya.io",
+  "phone": "+254 722 890 123",
+  "location": "Nairobi, Kenya",
+  "website": "github.com/davidmwangi • linkedin.com/in/david-mwangi",
+  "summary": "Versatile Full-Stack Systems Architect with 8+ years leading cross-functional engineering teams across East Africa. Specializing in high-throughput distributed systems, Next.js web applications, and fintech payment rails (M-Pesa Daraja & Pesalink). Proven record scaling cloud infrastructure to 1.5M+ active users with 99.98% uptime.",
+  "skills": {
+    "languages": "TypeScript, Next.js 15, React 19, Node.js, Python, Go, PostgreSQL, Redis",
+    "cloud": "AWS (ECS, Lambda, RDS, S3), Docker, Terraform, Supabase, Cloudflare",
+    "fintech": "M-Pesa Daraja API, KRA eTIMS Tax Engine, Pesalink, Automated Reconciliation"
+  },
+  "experience": [
+    {
+      "role": "Principal Solutions Architect",
+      "company": "Kopo Kopo & Mara Pay Technologies — Nairobi",
+      "period": "2023 – Present",
+      "highlights": "• Spearheaded redesign of core merchant payment gateway, slashing API latency from 450ms to 95ms under peak transaction loads.\n• Directed engineering of microservices handling 250,000+ daily M-Pesa STK push & C2B transactions with real-time settlement.\n• Mentored 14 frontend and backend engineers across agile sprints."
+    },
+    {
+      "role": "Senior Full-Stack Engineer",
+      "company": "Twiga Foods Digital Platforms — Nairobi",
+      "period": "2020 – 2023",
+      "highlights": "• Engineered logistics routing and vendor dispatch portal using Next.js, React, and GraphQL, serving over 8,000 daily vendor deliveries.\n• Built automated warehouse inventory forecasting system in Python/PostgreSQL, reducing stockout incidents by 28%.\n• Implemented automated CI/CD pipelines via GitHub Actions and AWS ECS Fargate."
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Cellulant Corporation — Nairobi",
+      "period": "2018 – 2020",
+      "highlights": "• Developed digital wallet integrations for regional banking partners across Kenya, Uganda, and Tanzania.\n• Conducted comprehensive security audits and unit testing suites achieving 94% test coverage."
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. in Computer Science (First Class Honours)",
+      "institution": "University of Nairobi",
+      "year": "2014 – 2018",
+      "details": "Dean's Commendation for Excellence; Chair of IEEE Student Branch"
+    },
+    {
+      "degree": "AWS Certified Solutions Architect – Professional",
+      "institution": "Amazon Web Services",
+      "year": "2024",
+      "details": "Credential ID: AWS-SAP-981244"
+    }
+  ]
+}

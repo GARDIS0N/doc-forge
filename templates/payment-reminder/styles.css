@@ -1,0 +1,17 @@
+.doc-reminder {
+  --rem-primary: #0f2b48;
+  --rem-accent: #b45309;
+  --rem-border: #cbd5e1;
+}
+
+.doc-reminder[data-variant="classic"] {
+  --rem-primary: #b45309;
+  --rem-accent: #92400e;
+  --rem-border: #fde68a;
+}
+
+.doc-reminder[data-variant="bold"] {
+  --rem-primary: #1e293b;
+  --rem-accent: #334155;
+  --rem-border: #e2e8f0;
+}

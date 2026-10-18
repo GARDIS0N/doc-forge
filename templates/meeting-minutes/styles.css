@@ -1,0 +1,17 @@
+.doc-minutes {
+  --min-primary: #0f2b48;
+  --min-accent: #1e3a8a;
+  --min-border: #cbd5e1;
+}
+
+.doc-minutes[data-variant="classic"] {
+  --min-primary: #1e293b;
+  --min-accent: #334155;
+  --min-border: #94a3b8;
+}
+
+.doc-minutes[data-variant="bold"] {
+  --min-primary: #047857;
+  --min-accent: #065f46;
+  --min-border: #a7f3d0;
+}

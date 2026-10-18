@@ -1,0 +1,25 @@
+{
+  "docNumber": "REM-2026-0044",
+  "date": "2026-10-18",
+  "invoiceRef": "INV-2026-0042",
+  "invoiceDate": "2026-09-01",
+  "amountDue": 149400,
+  "daysOverdue": 32,
+  "currency": "KES",
+  "sender": {
+    "businessName": "Apex Digital Solutions Ltd",
+    "address": "The Promenade, General Mathenge Dr, Westlands, Nairobi, Kenya",
+    "phone": "+254 712 345 678",
+    "email": "billing@apexdigital.co.ke",
+    "kraPin": "P051234567Z"
+  },
+  "recipient": {
+    "name": "Savannah Logistics Kenya Ltd",
+    "attention": "Mr. Patrick Mutisya (Managing Director)",
+    "address": "Kilindini Port View Plaza, 3rd Floor, Moi Avenue, Mombasa"
+  },
+  "subject": "STATEMENT & OVERDUE PAYMENT REMINDER: INVOICE INV-2026-0042",
+  "bodyParagraphs": "We are writing to bring to your immediate attention that the outstanding balance for services rendered under Invoice INV-2026-0042 remains unpaid and is now 32 days overdue.\n\nWe value our continuing partnership with Savannah Logistics Kenya Ltd and appreciate that administrative delays can occur. However, to keep your corporate account in good standing and prevent service suspension, we request that you remit the full balance within five (5) working days.\n\nIf settlement has already been completed, please forward the confirmation advice or M-Pesa transaction reference to billing@apexdigital.co.ke so we may update our ledger.",
+  "paymentInstructions": "Direct Bank Settlement:\nBank: NCBA Bank Kenya PLC | Acc Name: Apex Digital Solutions Ltd\nAccount Number: 8492019482 | Branch: Westlands (Code 07000)\n\nM-Pesa Paybill:\nBusiness Number: 522522 | Account: 8492019482",
+  "signatory": "Charles Ndung'u (Finance & Credit Controller)"
+}

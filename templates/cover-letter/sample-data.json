@@ -1,0 +1,14 @@
+{
+  "fullName": "David Kimani Mwangi",
+  "title": "Lead Full-Stack & Cloud Solutions Architect",
+  "email": "david.mwangi@techkenya.io",
+  "phone": "+254 722 890 123",
+  "location": "Nairobi, Kenya",
+  "date": "2026-10-18",
+  "hiringManager": "Chairperson, Senior Engineering Talent Selection Committee",
+  "companyName": "Safaricom PLC Digital Innovation Labs",
+  "companyAddress": "Safaricom HQ, HQ2 Building, Waiyaki Way, Nairobi",
+  "jobTitle": "Principal Cloud & Fintech Architect (Requisition #ENG-904)",
+  "salutation": "Dear Members of the Hiring Committee,",
+  "body": "I am writing to express my enthusiastic interest in the Principal Cloud & Fintech Architect role at Safaricom PLC.\n\nWith over 8 years architecting high-throughput distributed systems, microservices, and automated payment gateways across East Africa, I have consistently aligned technical infrastructure with high-growth business objectives. Most recently at Kopo Kopo, I led the core merchant payment gateway redesign that reduced STK push API latencies from 450ms to 95ms during peak holiday transaction volumes handling over 250,000 daily requests.\n\nSafaricom’s ongoing expansion into regional digital banking and scalable microservices demands secure, highly resilient cloud architectures. My extensive background with AWS ECS, Next.js web applications, and direct M-Pesa Daraja payment rails positions me to deliver immediate value to your engineering squads from day one.\n\nThank you for your time and consideration. I welcome the opportunity to discuss how my engineering leadership can accelerate Safaricom's digital products roadmap."
+}

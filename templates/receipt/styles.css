@@ -1,0 +1,17 @@
+.doc-receipt {
+  --rec-primary: #047857;
+  --rec-accent: #065f46;
+  --rec-border: #d1fae5;
+}
+
+.doc-receipt[data-variant="classic"] {
+  --rec-primary: #0f2b48;
+  --rec-accent: #1e3a8a;
+  --rec-border: #cbd5e1;
+}
+
+.doc-receipt[data-variant="bold"] {
+  --rec-primary: #1e293b;
+  --rec-accent: #334155;
+  --rec-border: #e2e8f0;
+}

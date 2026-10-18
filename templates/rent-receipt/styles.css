@@ -1,0 +1,17 @@
+.doc-rent-rec {
+  --rr-primary: #0f2b48;
+  --rr-accent: #1e3a8a;
+  --rr-border: #cbd5e1;
+}
+
+.doc-rent-rec[data-variant="classic"] {
+  --rr-primary: #047857;
+  --rr-accent: #065f46;
+  --rr-border: #a7f3d0;
+}
+
+.doc-rent-rec[data-variant="bold"] {
+  --rr-primary: #1e293b;
+  --rr-accent: #334155;
+  --rr-border: #e2e8f0;
+}

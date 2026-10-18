@@ -1,69 +1,114 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { ArrowRight, FileText, CheckCircle2, Zap, Shield, Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 flex flex-col justify-between">
+      {/* Top Navbar */}
+      <header className="border-b border-slate-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md sticky top-0 z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold shadow-md shadow-blue-500/20">
+              <FileText className="w-5 h-5" />
+            </div>
+            <span className="font-extrabold text-lg tracking-tight bg-linear-to-r from-slate-900 to-slate-700 dark:from-white dark:to-zinc-300 bg-clip-text text-transparent">
+              DocForge
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="/dashboard"
+              className="text-xs font-semibold text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-xl transition-colors"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              My Documents
+            </Link>
+            <Link
+              href="/templates"
+              className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs px-4 py-2 rounded-xl shadow-sm transition-all"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <span>Explore Templates</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </header>
+
+      {/* Hero Section */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-1 flex flex-col items-center justify-center text-center">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold mb-6 border border-blue-200/60 dark:border-blue-800/60 shadow-2xs">
+          <Sparkles className="w-3.5 h-3.5" />
+          <span>Pixel-Perfect Web-to-PDF Document Generator</span>
+        </div>
+
+        <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-900 dark:text-white max-w-4xl leading-tight">
+          Craft executive documents that command authority.
+        </h1>
+
+        <p className="mt-5 text-base sm:text-lg text-slate-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
+          Pick a designer-grade template, fill out guided forms with automated Kenyan tax & currency calculations, preview live on A4 paper, and export publication-ready PDFs.
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
+          <Link
+            href="/templates"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md shadow-blue-500/20 hover:shadow-lg transition-all"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <span>Browse 12+ Templates</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/editor/invoice"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-800 dark:text-zinc-200 font-semibold text-sm px-6 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 shadow-2xs transition-all"
           >
-            Documentation
-          </a>
+            <span>Try Invoice Template</span>
+          </Link>
+        </div>
+
+        {/* Value Props Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 max-w-5xl text-left">
+          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center mb-4">
+              <Zap className="w-5 h-5" />
+            </div>
+            <h3 className="font-bold text-base text-slate-900 dark:text-zinc-100">
+              Live Split-Screen Engine
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-zinc-400 mt-2 leading-relaxed">
+              Every keystroke in the guided form updates the A4 preview instantly. Zoom, adjust density, toggle variants with zero latency.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center mb-4">
+              <CheckCircle2 className="w-5 h-5" />
+            </div>
+            <h3 className="font-bold text-base text-slate-900 dark:text-zinc-100">
+              Kenyan Fiscal & Currency Intelligence
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-zinc-400 mt-2 leading-relaxed">
+              Auto-calculates VAT (16%), M-Pesa paybill instructions, KRA PIN fields, and number-to-words currency amounts in Kenyan Shillings.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center mb-4">
+              <Shield className="w-5 h-5" />
+            </div>
+            <h3 className="font-bold text-base text-slate-900 dark:text-zinc-100">
+              Server-Side Precision PDF
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-zinc-400 mt-2 leading-relaxed">
+              What you see in the browser is exactly what renders in your PDF. Powered by headless Chromium print rendering.
+            </p>
+          </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-200 dark:border-zinc-800 py-6 text-center text-xs text-slate-500 dark:text-zinc-500">
+        <p>© 2026 DocForge Studio. Designed for professionals and businesses.</p>
+      </footer>
     </div>
   );
 }

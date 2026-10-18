@@ -1,0 +1,17 @@
+.doc-quotation {
+  --quo-primary: #1d4ed8;
+  --quo-accent: #2563eb;
+  --quo-border: #bfdbfe;
+}
+
+.doc-quotation[data-variant="classic"] {
+  --quo-primary: #0f2b48;
+  --quo-accent: #1e3a8a;
+  --quo-border: #cbd5e1;
+}
+
+.doc-quotation[data-variant="bold"] {
+  --quo-primary: #1e293b;
+  --quo-accent: #334155;
+  --quo-border: #e2e8f0;
+}

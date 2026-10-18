@@ -1,0 +1,20 @@
+{
+  "docNumber": "MOU-2026-088",
+  "agreementTitle": "MEMORANDUM OF UNDERSTANDING & SERVICE LEVEL AGREEMENT",
+  "effectiveDate": "2026-10-18",
+  "expiryDate": "2027-10-17",
+  "currency": "KES",
+  "partyA": {
+    "name": "Apex Digital Solutions Ltd",
+    "representative": "David Kimani Mwangi (Principal Solutions Architect)",
+    "address": "The Promenade, General Mathenge Dr, Westlands, Nairobi, Kenya"
+  },
+  "partyB": {
+    "name": "Savannah Logistics Kenya Ltd",
+    "representative": "Patrick Mutisya (Managing Director)",
+    "address": "Kilindini Port View Plaza, 3rd Floor, Moi Avenue, Mombasa, Kenya"
+  },
+  "contractValue": 1200000,
+  "purpose": "This Agreement establishes a formal commercial framework wherein Party A shall design, engineer, and maintain a Next.js Cloud Dispatch Platform and automated M-Pesa transaction engine for Party B across its East African logistics fleet.",
+  "obligations": "1. SCOPE OF SERVICES: Party A shall deliver production code, maintain cloud infrastructure on AWS/Supabase, and provide technical support with guaranteed 99.9% availability.\n2. REMUNERATION: Party B shall pay the total contract value of KES 1,200,000 across agreed milestone tranches within 14 days of invoice submission.\n3. CONFIDENTIALITY: Each party agrees to treat proprietary software, customer databases, and commercial trade secrets with strict confidentiality.\n4. GOVERNING LAW: This Agreement shall be interpreted and enforced under the Laws of the Republic of Kenya."
+}

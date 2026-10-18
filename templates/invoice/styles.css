@@ -1,0 +1,65 @@
+/* Invoice template CSS with 3 theme variants */
+.doc-invoice {
+  --inv-primary: #1e293b;
+  --inv-primary-light: #f1f5f9;
+  --inv-accent: #0f172a;
+  --inv-text: #334155;
+  --inv-text-muted: #64748b;
+  --inv-border: #e2e8f0;
+  --inv-header-bg: #f8fafc;
+  --inv-badge-bg: #e2e8f0;
+  --inv-badge-text: #0f172a;
+}
+
+/* Variant: Classic (Executive Navy) */
+.doc-invoice[data-variant="classic"] {
+  --inv-primary: #0f2b48;
+  --inv-primary-light: #eef4f9;
+  --inv-accent: #1e4976;
+  --inv-text: #1e293b;
+  --inv-text-muted: #475569;
+  --inv-border: #cbd5e1;
+  --inv-header-bg: #0f2b48;
+  --inv-badge-bg: #e0f2fe;
+  --inv-badge-text: #0369a1;
+}
+
+/* Variant: Bold (Kenyan Emerald Green) */
+.doc-invoice[data-variant="bold"] {
+  --inv-primary: #047857;
+  --inv-primary-light: #ecfdf5;
+  --inv-accent: #065f46;
+  --inv-text: #1e293b;
+  --inv-text-muted: #475569;
+  --inv-border: #a7f3d0;
+  --inv-header-bg: #047857;
+  --inv-badge-bg: #d1fae5;
+  --inv-badge-text: #065f46;
+}
+
+/* Print page break handling */
+@media print {
+  .doc-invoice {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .doc-table-wrapper table {
+    page-break-inside: auto;
+  }
+
+  .doc-table-wrapper tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  .doc-table-wrapper thead {
+    display: table-header-group;
+  }
+
+  .doc-table-wrapper tfoot {
+    display: table-footer-group;
+  }
+}

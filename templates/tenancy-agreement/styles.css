@@ -1,0 +1,17 @@
+.doc-tenancy {
+  --ten-primary: #0f2b48;
+  --ten-accent: #1e3a8a;
+  --ten-border: #cbd5e1;
+}
+
+.doc-tenancy[data-variant="classic"] {
+  --ten-primary: #1e293b;
+  --ten-accent: #334155;
+  --ten-border: #94a3b8;
+}
+
+.doc-tenancy[data-variant="bold"] {
+  --ten-primary: #047857;
+  --ten-accent: #065f46;
+  --ten-border: #a7f3d0;
+}

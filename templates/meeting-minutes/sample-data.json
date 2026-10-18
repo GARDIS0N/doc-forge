@@ -1,0 +1,32 @@
+{
+  "docNumber": "MIN-2026-Q4-01",
+  "meetingTitle": "Executive Engineering & Cloud Architecture Strategy Board",
+  "date": "2026-10-18",
+  "timeLocation": "10:00 AM – 1:00 PM • Executive Boardroom, The Promenade, Westlands & Zoom",
+  "chairperson": "Ambassador James Karanja Gitau (Board Chair)",
+  "secretary": "Faith Wangari (Corporate Secretary)",
+  "attendees": "James Karanja (Chair), David Mwangi (Tech Lead), Mercy Achieng (Finance Director), Erick Mutua (Head of Procurement), Kevin Omondi (Commercial Director)",
+  "apologies": "Dr. Samuel Kiptoo (Operations Head) — On site assignment in Mombasa",
+  "agendaSummary": "1. Review and adoption of previous minutes\n2. Q4 Cloud Infrastructure scaling & Supabase budget\n3. M-Pesa automated reconciliation engine implementation\n4. A.O.B and scheduling of Q1 2027 General Board Review",
+  "deliberations": "MIN 01/Q4/26 — Adoption of Previous Minutes:\nThe minutes of the previous strategy meeting held on 15th September 2026 were reviewed and unanimously adopted as a true and accurate record.\n\nMIN 02/Q4/26 — Cloud Platform & Supabase Migration:\nDavid Mwangi presented the comprehensive architecture blueprint for the Next.js and Supabase enterprise migration. The board reviewed security audits, RLS policies, and agreed to approve the infrastructure capital budget of KES 2.5M.\n\nMIN 03/Q4/26 — Payment Gateway Failover:\nMercy Achieng reported that transaction volume exceeded KES 150M in Q3. The board resolved to mandate dual-redundancy M-Pesa endpoints to maintain 99.98% platform reliability.",
+  "actions": [
+    {
+      "action": "Finalize AWS & Supabase deployment pipeline configuration",
+      "owner": "David Mwangi",
+      "deadline": "25 Oct 2026",
+      "status": "In Progress"
+    },
+    {
+      "action": "Execute merchant SLA agreement with Safaricom Daraja team",
+      "owner": "Mercy Achieng",
+      "deadline": "31 Oct 2026",
+      "status": "Pending Sign-off"
+    },
+    {
+      "action": "Procure hardware server racks for Mombasa secondary hub",
+      "owner": "Erick Mutua",
+      "deadline": "05 Nov 2026",
+      "status": "PO Dispatched"
+    }
+  ]
+}

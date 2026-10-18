@@ -1,0 +1,22 @@
+{
+  "docNumber": "REC-2026-0819",
+  "date": "2026-10-18",
+  "paymentMethod": "M-Pesa",
+  "mpesaReference": "QKH8912PZ4",
+  "currency": "KES",
+  "sender": {
+    "businessName": "Apex Digital Solutions Ltd",
+    "address": "Suite 4B, The Promenade, Westlands, Nairobi",
+    "phone": "+254 712 345 678",
+    "email": "billing@apexdigital.co.ke",
+    "kraPin": "P051234567Z"
+  },
+  "receivedFrom": {
+    "name": "Savannah Logistics Kenya Ltd",
+    "contact": "Ms. Faith Wangari (+254 712 999 888)"
+  },
+  "amountPaid": 215000,
+  "forPaymentOf": "Full settlement for Q4 Enterprise Web Portal Deployment and Cloud Infrastructure configuration as per Invoice INV-2026-0042.",
+  "balanceRemaining": 0,
+  "receivedBy": "Mercy Achieng (Chief Accountant)"
+}

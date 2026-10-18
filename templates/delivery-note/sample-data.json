@@ -1,0 +1,39 @@
+{
+  "docNumber": "DN-2026-0544",
+  "date": "2026-10-18",
+  "orderRef": "PO-2026-0312",
+  "vehicleReg": "KBZ 892M (Driver: James Kiprono)",
+  "sender": {
+    "businessName": "Apex Digital Solutions & Logistics Ltd",
+    "address": "Enterprise Rd, Industrial Area, Nairobi, Kenya",
+    "phone": "+254 712 345 678",
+    "email": "logistics@apexdigital.co.ke"
+  },
+  "recipient": {
+    "name": "Savannah Port Operations Center",
+    "address": "Moi Avenue, Dockside Warehouse 4, Mombasa, Kenya",
+    "phone": "+254 712 999 888"
+  },
+  "items": [
+    {
+      "description": "Ubiquiti UniFi Dream Machine Pro (S/N: UDM-PRO-981247)",
+      "orderedQty": 2,
+      "deliveredQty": 2,
+      "remarks": "Original Factory Box (Sealed)"
+    },
+    {
+      "description": "CAT6A Pure Copper Shielded Ethernet Drums (305m)",
+      "orderedQty": 6,
+      "deliveredQty": 6,
+      "remarks": "Unopened Wooden Spools"
+    },
+    {
+      "description": "APC Smart-UPS 3000VA LCD Rackmount Power Supply",
+      "orderedQty": 2,
+      "deliveredQty": 2,
+      "remarks": "Heavy Pallet / Inspected OK"
+    }
+  ],
+  "declaration": "I hereby confirm receipt of the above items in good order and condition. No visible damages or shortages observed upon delivery inspection.",
+  "receivedByPerson": "George Otieno (Stores Manager — National ID: 28491024)"
+}

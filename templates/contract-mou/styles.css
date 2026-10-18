@@ -1,0 +1,17 @@
+.doc-mou {
+  --mou-primary: #0f2b48;
+  --mou-accent: #1e3a8a;
+  --mou-border: #cbd5e1;
+}
+
+.doc-mou[data-variant="classic"] {
+  --mou-primary: #1e293b;
+  --mou-accent: #334155;
+  --mou-border: #94a3b8;
+}
+
+.doc-mou[data-variant="bold"] {
+  --mou-primary: #047857;
+  --mou-accent: #065f46;
+  --mou-border: #a7f3d0;
+}

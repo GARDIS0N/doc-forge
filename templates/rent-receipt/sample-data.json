@@ -1,0 +1,20 @@
+{
+  "docNumber": "RR-2026-1048",
+  "date": "2026-10-18",
+  "monthPaidFor": "October 2026",
+  "mpesaCode": "QL9012HK9A",
+  "currency": "KES",
+  "landlord": {
+    "name": "Ambassador James Karanja Gitau",
+    "phone": "+254 722 334 455",
+    "email": "karanja.gitau@gmail.com"
+  },
+  "tenant": {
+    "name": "Brian Kiprop Cheruiyot",
+    "phone": "+254 718 200 300"
+  },
+  "propertyAddress": "Apartment 4B, Acacia Court, Rhapta Road, Westlands, Nairobi",
+  "rentAmount": 65000,
+  "serviceCharge": 5000,
+  "balanceCarriedForward": 0
+}

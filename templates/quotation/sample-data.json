@@ -1,0 +1,39 @@
+{
+  "docNumber": "QUO-2026-0158",
+  "date": "2026-10-18",
+  "validUntil": "2026-11-18",
+  "preparedBy": "Kevin Omondi (Commercial Director)",
+  "currency": "KES",
+  "sender": {
+    "businessName": "Apex Digital Solutions Ltd",
+    "email": "sales@apexdigital.co.ke",
+    "phone": "+254 712 345 678",
+    "address": "The Promenade, General Mathenge Dr, Westlands, Nairobi",
+    "kraPin": "P051234567Z"
+  },
+  "client": {
+    "name": "Rift Valley Agribusiness Hub Ltd",
+    "contactPerson": "Dr. Samuel Kiptoo (Operations Head)",
+    "email": "procurement@riftvalleyagri.com",
+    "address": "Kenyatta Avenue, Nakuru Plaza 4th Fl, Nakuru, Kenya"
+  },
+  "items": [
+    {
+      "description": "Smart Cold-Chain IoT Sensor Monitoring Platform (10 Warehouses)",
+      "qty": 1,
+      "unitPrice": 480000
+    },
+    {
+      "description": "Custom Real-time Dashboard & Automated SMS Dispatch System",
+      "qty": 1,
+      "unitPrice": 185000
+    },
+    {
+      "description": "On-site Hardware Installation, Calibration & Staff Training",
+      "qty": 1,
+      "unitPrice": 75000
+    }
+  ],
+  "applyVat": true,
+  "terms": "1. Validity: This quotation is binding and valid for 30 calendar days from the date of issuance.\n2. Payment Schedule: 50% upon contract signing and LPO issuance, 50% upon successful system handover.\n3. SLA: 12 months comprehensive hardware warranty and 24/7 technical helpdesk included."
+}

@@ -1,0 +1,50 @@
+{
+  "docNumber": "INV-2026-0042",
+  "issueDate": "2026-10-17",
+  "dueDate": "2026-10-31",
+  "currency": "KES",
+  "sender": {
+    "businessName": "Apex Digital Solutions Ltd",
+    "tagline": "Enterprise Cloud Architecture & Digital Platforms",
+    "email": "billing@apexdigital.co.ke",
+    "phone": "+254 712 345 678",
+    "address": "Suite 4B, The Promenade, General Mathenge Dr, Westlands, Nairobi",
+    "kraPin": "P051234567Z"
+  },
+  "client": {
+    "name": "Savannah Logistics Kenya Ltd",
+    "contactPerson": "Ms. Faith Wangari (Finance Director)",
+    "email": "finance@savannahlogistics.co.ke",
+    "address": "Kilindini Port View Plaza, 3rd Floor, Moi Avenue, Mombasa",
+    "kraPin": "P059876543A"
+  },
+  "items": [
+    {
+      "description": "Next.js Web Portal Development & Custom Client Dashboard",
+      "qty": 1,
+      "unitPrice": 150000
+    },
+    {
+      "description": "Cloud Infrastructure Setup, Docker Containers & Supabase Integration",
+      "qty": 1,
+      "unitPrice": 65000
+    },
+    {
+      "description": "Production SLA Support & Monitoring Services (Q4 2026)",
+      "qty": 3,
+      "unitPrice": 20000
+    }
+  ],
+  "applyVat": true,
+  "vatRate": 16,
+  "amountPaid": 100000,
+  "payment": {
+    "bankName": "NCBA Bank Kenya PLC",
+    "accountName": "Apex Digital Solutions Ltd",
+    "accountNumber": "8492019482",
+    "branch": "Westlands Branch (Code: 07000)",
+    "mpesaPaybill": "522522 (Account: 8492019482)"
+  },
+  "terms": "Payment is strictly due within 14 days of invoice date. All payments must reference invoice number INV-2026-0042.",
+  "footerNote": "Thank you for partnering with Apex Digital Solutions Ltd."
+}

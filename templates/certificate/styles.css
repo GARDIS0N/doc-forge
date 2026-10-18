@@ -1,0 +1,17 @@
+.doc-cert {
+  --cert-primary: #b45309;
+  --cert-accent: #d97706;
+  --cert-border: #f59e0b;
+}
+
+.doc-cert[data-variant="classic"] {
+  --cert-primary: #0f2b48;
+  --cert-accent: #1e3a8a;
+  --cert-border: #3b82f6;
+}
+
+.doc-cert[data-variant="bold"] {
+  --cert-primary: #047857;
+  --cert-accent: #065f46;
+  --cert-border: #10b981;
+}
