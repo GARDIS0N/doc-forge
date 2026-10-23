@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { allTemplates, RegisteredTemplate } from '@/lib/registry';
 import { DocPage } from '@/components/doc/DocPage';
+import { UserMenu } from '@/components/auth/UserMenu';
 import { Search, Sparkles, Eye, ArrowRight, X, FileText, CheckCircle2 } from 'lucide-react';
 
 export default function TemplateGalleryPage() {
@@ -53,6 +54,7 @@ export default function TemplateGalleryPage() {
             >
               My Documents
             </Link>
+            <UserMenu />
           </div>
         </div>
       </header>

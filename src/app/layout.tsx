@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { AppProviders } from '@/components/providers/AppProviders';
 import './globals.css';
 
 const inter = Inter({
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="min-h-screen flex flex-col bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100">
-        {children}
+        <AppProviders>{children}</AppProviders>
       </body>
     </html>
   );

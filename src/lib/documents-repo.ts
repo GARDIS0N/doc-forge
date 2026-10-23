@@ -1,21 +1,8 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { SupabaseClient } from '@supabase/supabase-js';
+import { getSupabase } from './supabase';
 import { SavedDocument, DocumentStatus } from './types';
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-let supabaseClient: SupabaseClient | null = null;
-if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-  try {
-    supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  } catch (e) {
-    console.warn('Could not initialize Supabase client:', e);
-  }
-}
-
-export function getSupabase(): SupabaseClient | null {
-  return supabaseClient;
-}
+export { getSupabase };
 
 const STORAGE_KEY = 'docforge_saved_documents_v1';
 
@@ -115,15 +102,23 @@ function setLocalDocuments(docs: SavedDocument[]): void {
 }
 
 export async function listDocuments(): Promise<SavedDocument[]> {
-  if (supabaseClient) {
+  const supabase = getSupabase();
+
+  if (supabase) {
     try {
-      const { data, error } = await supabaseClient
-        .from('documents')
-        .select('*')
-        .order('updated_at', { ascending: false });
+      const { data: authData } = await supabase.auth.getUser();
+      const currentUser = authData?.user;
+
+      let query = supabase.from('documents').select('*');
+      if (currentUser) {
+        query = query.eq('user_id', currentUser.id);
+      }
+      query = query.order('updated_at', { ascending: false });
+
+      const { data, error } = await query;
 
       if (!error && data) {
-        return data.map((d: any) => ({
+        const mapped = data.map((d: any) => ({
           id: d.id,
           userId: d.user_id,
           templateSlug: d.template_slug,
@@ -137,6 +132,12 @@ export async function listDocuments(): Promise<SavedDocument[]> {
           createdAt: d.created_at,
           updatedAt: d.updated_at,
         }));
+
+        // If documents were found in cloud, update local cache too
+        if (mapped.length > 0) {
+          setLocalDocuments(mapped);
+          return mapped;
+        }
       }
     } catch (e) {
       console.warn('Supabase fetch failed, falling back to local storage:', e);
@@ -177,20 +178,28 @@ export async function saveDocument(doc: Partial<SavedDocument> & { templateSlug:
     updatedAt: now,
   };
 
-  if (supabaseClient) {
+  const supabase = getSupabase();
+  if (supabase) {
     try {
-      await supabaseClient.from('documents').upsert({
-        id: completeDoc.id,
-        template_slug: completeDoc.templateSlug,
-        title: completeDoc.title,
-        doc_number: completeDoc.docNumber,
-        status: completeDoc.status,
-        data: completeDoc.data,
-        styles: completeDoc.styles,
-        grand_total: completeDoc.grandTotal,
-        currency: completeDoc.currency,
-        updated_at: completeDoc.updatedAt,
-      });
+      const { data: authData } = await supabase.auth.getUser();
+      const currentUser = authData?.user;
+
+      if (currentUser) {
+        completeDoc.userId = currentUser.id;
+        await supabase.from('documents').upsert({
+          id: completeDoc.id,
+          user_id: currentUser.id,
+          template_slug: completeDoc.templateSlug,
+          title: completeDoc.title,
+          doc_number: completeDoc.docNumber,
+          status: completeDoc.status,
+          data: completeDoc.data,
+          styles: completeDoc.styles,
+          grand_total: completeDoc.grandTotal,
+          currency: completeDoc.currency,
+          updated_at: completeDoc.updatedAt,
+        });
+      }
     } catch (e) {
       console.warn('Supabase save failed, saving locally:', e);
     }
@@ -234,9 +243,10 @@ export async function updateDocumentStatus(id: string, status: DocumentStatus): 
 }
 
 export async function deleteDocument(id: string): Promise<boolean> {
-  if (supabaseClient) {
+  const supabase = getSupabase();
+  if (supabase) {
     try {
-      await supabaseClient.from('documents').delete().eq('id', id);
+      await supabase.from('documents').delete().eq('id', id);
     } catch (e) {
       console.warn('Supabase delete failed:', e);
     }

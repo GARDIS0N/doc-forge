@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, FileText, CheckCircle2, Zap, Shield, Sparkles } from 'lucide-react';
+import { UserMenu } from '@/components/auth/UserMenu';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Link
               href="/dashboard"
-              className="text-xs font-semibold text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-xl transition-colors"
+              className="text-xs font-semibold text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-xl transition-colors hidden sm:inline"
             >
               My Documents
             </Link>
@@ -30,6 +31,7 @@ export default function Home() {
               <span>Explore Templates</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
+            <UserMenu />
           </div>
         </div>
       </header>

@@ -10,6 +10,8 @@ import {
 } from '@/lib/documents-repo';
 import { SavedDocument, DocumentStatus } from '@/lib/types';
 import { formatCurrency, formatDate } from '@/lib/format';
+import { UserMenu } from '@/components/auth/UserMenu';
+import { useAuth } from '@/contexts/AuthContext';
 import {
   FileText,
   Plus,
@@ -27,6 +29,7 @@ import {
 } from 'lucide-react';
 
 export default function DashboardPage() {
+  const { user, isConfigured } = useAuth();
   const [documents, setDocuments] = useState<SavedDocument[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('All');
@@ -41,7 +44,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     loadDocs();
-  }, []);
+  }, [user]);
 
   const handleDuplicate = async (id: string) => {
     await duplicateDocument(id);
@@ -124,6 +127,7 @@ export default function DashboardPage() {
               <Plus className="w-3.5 h-3.5" />
               <span>Create Document</span>
             </Link>
+            <UserMenu />
           </div>
         </div>
       </header>

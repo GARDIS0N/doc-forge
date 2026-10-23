@@ -6,6 +6,7 @@ import { useEditorStore } from '@/store/editor';
 import { TemplateMeta } from '@/lib/types';
 import { BrandKitModal } from '@/components/brand/BrandKitModal';
 import { StyleDrawer } from '@/components/editor/StyleDrawer';
+import { UserMenu } from '@/components/auth/UserMenu';
 import {
   ArrowLeft,
   RotateCcw,
@@ -159,6 +160,10 @@ export const Toolbar: React.FC<ToolbarProps> = ({ meta, sampleData }) => {
             <RotateCcw className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Reset</span>
           </button>
+
+          <div className="h-5 w-px bg-slate-200 dark:border-zinc-700 mx-1 hidden sm:block" />
+
+          <UserMenu onOpenBrandKit={() => setIsBrandKitOpen(true)} />
         </div>
       </header>
 
